@@ -2,10 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import MainMenu from './components/navigation/mainMenu.vue'
-import MainMenuSub from './components/navigation/mainMenuSub.vue'
-import AdminMenu from './components/navigation/adminMenu.vue'
-import MainFooter from './components/navigation/mainFooter.vue'
+// import MainMenu from './components/navigation/mainMenu.vue'
+// import MainMenuSub from './components/navigation/mainMenuSub.vue'
+// import AdminMenu from './components/navigation/adminMenu.vue'
+// import MainFooter from './components/navigation/mainFooter.vue'
 import router from './router'
 
 Vue.config.productionTip = false
@@ -28,30 +28,30 @@ new Vue({
   template: '<App/>'
 })
 
-new Vue({
-  el: '#main-menu',
-  router,
-  components: { MainMenu },
-  template: '<MainMenu/>'
-})
+// new Vue({
+//   el: '#main-menu',
+//   router,
+//   components: { MainMenu },
+//   template: '<MainMenu/>'
+// })
 
-new Vue({
-  el: '#main-menu-sub',
-  router,
-  components: { MainMenuSub },
-  template: '<MainMenuSub/>'
-})
+// new Vue({
+//   el: '#main-menu-sub',
+//   router,
+//   components: { MainMenuSub },
+//   template: '<MainMenuSub/>'
+// })
 
-new Vue({
-  el: '#admin-menu',
-  router,
-  components: { AdminMenu },
-  template: '<AdminMenu/>'
-})
+// new Vue({
+//   el: '#admin-menu',
+//   router,
+//   components: { AdminMenu },
+//   template: '<AdminMenu/>'
+// })
 
-new Vue({
-  el: '#main-footer',
-  router,
-  components: { MainFooter },
-  template: '<MainFooter/>'
-})
+// new Vue({
+//   el: '#main-footer',
+//   router,
+//   components: { MainFooter },
+//   template: '<MainFooter/>'
+// })
