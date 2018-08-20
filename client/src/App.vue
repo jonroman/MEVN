@@ -7,16 +7,22 @@
 </template>
 
 <script>
-/* eslint-disable */
-export default {
-  name: "App",
-  data() {
-    return {
-      admin_view: true
-    };
-  },
-  components: {}
-};
+
+  /* eslint-disable */
+  export default {
+    name: "App",
+    data() {
+      return {
+        admin_view: true
+      };
+    },
+    mounted() {
+      this.$nextTick(() => {
+       // run JQUERY HERE!
+       $('#app').hide().fadeIn('slow');
+      });
+    }
+  };
 </script>
 
 <style>

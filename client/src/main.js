@@ -8,6 +8,13 @@ import App from './App'
 // import MainFooter from './components/navigation/mainFooter.vue'
 import router from './router'
 
+//JQUERY
+import jQuery from 'jquery'
+global.jQuery = jQuery
+global.$ = jQuery
+let Bootstrap = require('bootstrap')
+import 'bootstrap/dist/css/bootstrap.css'
+
 Vue.config.productionTip = false
 
 // Vuetify
