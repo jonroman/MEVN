@@ -1,11 +1,10 @@
 /*** Main View ***/
-
 /* Modules */
 .dsti-blue-bg {
-    background-color: rgb(22, 61, 94);
+    background-color: rgb(58, 80, 104);
 }
 .dsti-orange-bg {
-    background-color: rgb(187, 97, 34);
+    background-color: rgb(189, 104, 47);
 }
 .dsti-grey-bg {
     background-color: rgb(221, 221, 221);
@@ -79,27 +78,18 @@
     left: 50%;
     top: 52%;
     transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 97%;
     height: 96%;
     text-align: center;
-    /* border: 1px solid blue; */
     background-color: white;
 }
 .vertical-slider-middle-small {
-    position: relative;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 100%;
     height: 100%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
 .search-bar {
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
 }
 .search-bar-large {
     height: 100px;
@@ -112,24 +102,15 @@
     left: 49%;
     top: 48%;
     transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 96%;
     height: 65%;
     text-align: center;
-    /* border: 1px solid blue; */
     background-color: white;
 }
 .search-bar-middle-medium {
-    position: relative;
-    left: 49%;
     top: 55%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 94%;
     height: 90%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
 
 .quick-links {
@@ -149,13 +130,12 @@
     left: 49%;
     top: 45%;
     transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 96%;
     height: 93%;
     text-align: center;
-    /* border: 1px solid blue; */
     background-color: white;
 }
+
 .event-log {
     /* background-color: forestgreen; */
 }
@@ -181,28 +161,17 @@
     background-color: white;
 }
 .event-log-middle-medium {
-    position: relative;
     left: 51%;
     top: 48%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 97%;
     height: 95%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
 .event-log-middle-small {
     position: relative;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 100%;
     height: 95%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
 
 .employee-slider {
@@ -222,37 +191,24 @@
     left: 52%;
     top: 40%;
     transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 95%;
     height: 90%;
     text-align: center;
-    /* border: 1px solid blue; */
     background-color: white;
 }
 .employee-slider-middle-medium {
-    position: relative;
     left: 49%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 94%;
     height: 96%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
 .employee-slider-middle-small {
-    position: relative;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 100%;
     height: 100%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
+
 .recent-log {
     /* background-color: slategray; */
 }
@@ -270,36 +226,20 @@
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 95%;
     height: 95%;
     text-align: center;
-    /* border: 1px solid blue; */
     background-color: white;
 }
 .recent-log-middle-medium {
-    position: relative;
     left: 51%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 97%;
     height: 95%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
 .recent-log-middle-small {
-    position: relative;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 100%;
-    height: 95%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
 
 .im { /* Instant Message*/
@@ -316,24 +256,15 @@
     left: 49%;
     top: 45%;
     transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 96%;
     height: 95%;
     text-align: center;
-    /* border: 1px solid blue; */
     background-color: white;
 }
 .im-middle-medium {
-    position: relative;
-    left: 49%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    /* unnecessary styling properties */
     width: 94%;
     height: 96%;
-    text-align: center;
-    /* border: 1px solid blue; */
-    background-color: white;
 }
 
 .footer-menu {
@@ -350,6 +281,6 @@
 }
 
 .ribbon {
-    border-top: solid  rgb(187, 97, 34);
+    border-top: solid  rgb(189, 104, 47);
     border-top-width: 3px;
 }

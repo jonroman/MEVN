@@ -76,29 +76,29 @@
       <div class="row no-gutters">
         <div class="col-8">
           <div class="recent-log recent-log-medium">
-            <div class="recent-log-middle-medium ribbon">
+            <div class="recent-log-middle recent-log-middle-medium ribbon">
               <h3>Recent Log</h3> col-lg-5
             </div>
           </div>
           <div class="event-log event-log-medium">
-            <div class="event-log-middle-medium ribbon">
+            <div class="event-log-middle event-log-middle-medium ribbon">
               <h3>Event Log</h3> col-lg-3
             </div>
           </div>
         </div>
         <div class="col-4">
           <div class="search-bar-medium">
-            <div class="search-bar-middle-medium ribbon">
+            <div class="search-bar-middle search-bar-middle-medium ribbon">
               <h3>Search Bar</h3> col-lg-4
             </div>
           </div>
           <div class="im im-medium">
-            <div class="im-middle-medium ribbon">
+            <div class="im-middle im-middle-medium ribbon">
               <h3>Instant Message</h3> col-lg-4
             </div>
           </div>
           <div class="employee-slider employee-slider-medium">
-            <div class="employee-slider-middle-medium ribbon">
+            <div class="employee-slider-middle employee-slider-middle-medium ribbon">
               <h3>Emplyee SLider</h3> col-lg-3
             </div>
           </div>
@@ -110,7 +110,7 @@
     <div id="large-view" v-if="$mq === 'sm'"> <!-- VIEW: Main Large -->
       <div class="row no-gutters">
         <div class="col-12 vertical-slider vertical-slider-small">
-          <div class="vertical-slider-middle-small">
+          <div class="vertical-slider-middle vertical-slider-middle-small">
             <h1>Vertical Slider</h1>
             <h2>{{$mq}}</h2>
           </div>
@@ -119,7 +119,7 @@
       <div class="row no-gutters">
         <div class="col-12">
           <div class="recent-log recent-log-small">
-            <div class="recent-log-middle-small ribbon">
+            <div class="recent-log-middle recent-log-middle-small ribbon">
               <h3>Recent Log</h3> col-lg-5
             </div>
           </div>
@@ -128,7 +128,7 @@
       <div class="row no-gutters">
         <div class="col-12">
           <div class="employee-slider employee-slider-small">
-            <div class="employee-slider-middle-small ribbon">
+            <div class="employee-slider-middle employee-slider-middle-small ribbon">
               <h3>Employee Slide</h3> col-lg-5
             </div>
           </div>
@@ -137,7 +137,7 @@
       <div class="row no-gutters">
         <div class="col-12">
           <div class="event-log event-log-small">
-            <div class="event-log-middle-small ribbon">
+            <div class="event-log-middle event-log-middle-small ribbon">
               <h3>Event Log</h3> col-lg-5
             </div>
           </div>
