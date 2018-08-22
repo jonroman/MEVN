@@ -15,6 +15,16 @@ global.$ = jQuery
 let Bootstrap = require('bootstrap')
 import 'bootstrap/dist/css/bootstrap.css'
 
+// MEDIA QUERIES and responsive design
+import VueMq from 'vue-mq'
+Vue.use(VueMq, {
+  breakpoints: { // Define breakpoint for myDSTI here
+    sm: 450,
+    md: 1199,
+    lg: Infinity
+  }
+});
+
 Vue.config.productionTip = false
 
 // Vuetify
