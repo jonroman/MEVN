@@ -2,170 +2,48 @@
   <div id="app" class=".container-fluid dsti-grey-bg">
     <!-- MAIN MENU -->
     <div class="row no-gutters">
-      <div class="col-12 main-menu main-menu-large dsti-blue-bg">
+      <!-- SHOW ADMIN and Main Menu -->
+      <div class="col-2" v-if="show_admin_view">
+        <v-adminMenu />
+      </div>
+      <div class="col-10" v-if="show_admin_view">
+        <v-mainMenu />
+        <v-mainMenuSub class="sub-main-menu-large dsti-white-bg" />
+        <v-AdminToolsView /> <!-- nested -->
+      </div>
+      <div class="col-12" v-if="show_main_view">
         <v-mainMenu />
       </div>
     </div>
+
     <!-- SUB MENU -->
-    <div class="row no-gutters" v-if="$mg == 'lg' && $mg == 'md'">
-      <div class="col-12 sub-main-menu sub-main-menu-large dsti-white-bg">
-        <v-mainMenuSub />
+    <div class="row no-gutters" v-if="showSubMenu">
+      <div class="col-12 ">
+        <v-mainMenuSub class="sub-main-menu-large dsti-white-bg" />
       </div>
     </div>
-    <!-- VIEW: Main Large -->
-    <div id="large-view" v-if="$mq === 'lg'">
-     <div class="row no-gutters">
-       <div class="col-8 vertical-slider vertical-slider-large">
-         <div class="vertical-slider-middle">
-           <h2>{{$mq}}</h2>
-         </div>
-       </div>
-       <div class="col-4">
-         <div class="search-bar-large">
-           <div class="search-bar-middle">
-             <h3>Search Bar</h3> col-lg-4
-           </div>
-         </div>
-         <div class="quick-links quick-links-large">
-           <div class="quick-links-middle">
-             <h3>Quick Links</h3> col-lg-4
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="row no-gutters">
-       <div class="col-3">
-         <div class="event-log event-log-large">
-           <div class="event-log-middle ribbon">
-             <h3>Event Log</h3> col-lg-3
-           </div>
-         </div>
-         <div class="employee-slider employee-slider-large">
-           <div class="employee-slider-middle ribbon">
-             <h3>Emplyee SLider</h3> col-lg-3
-           </div>
-         </div>
-       </div>
-       <div class="col-5">
-         <div class="recent-log recent-log-large">
-           <div class="recent-log-middle ribbon">
-             <h3>Recent Log</h3> col-lg-5
-           </div>
-         </div>
-       </div>
-       <div class="col-4">
-         <div class="im im-large">
-           <div class="im-middle ribbon">
-             <h3>Instant Message</h3> col-lg-4
-           </div>
-         </div>
-       </div>
-     </div>
-    </div> <!-- LARGE -->
 
-    <!-- MEDIUM VIEW -->
-    <div id="large-view" v-if="$mq === 'md'"> <!-- VIEW: Main Large -->
-      <div class="row no-gutters">
-        <div class="col-12 vertical-slider vertical-slider-large">
-          <div class="vertical-slider-middle">
-            <h1>Vertical SLider</h1>
-            <h2>{{$mq}}</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-8">
-          <div class="recent-log recent-log-medium">
-            <div class="recent-log-middle recent-log-middle-medium ribbon">
-              <h3>Recent Log</h3> col-lg-5
-            </div>
-          </div>
-          <div class="event-log event-log-medium">
-            <div class="event-log-middle event-log-middle-medium ribbon">
-              <h3>Event Log</h3> col-lg-3
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="search-bar-medium">
-            <div class="search-bar-middle search-bar-middle-medium ribbon">
-              <h3>Search Bar</h3> col-lg-4
-            </div>
-          </div>
-          <div class="im im-medium">
-            <div class="im-middle im-middle-medium ribbon">
-              <h3>Instant Message</h3> col-lg-4
-            </div>
-          </div>
-          <div class="employee-slider employee-slider-medium">
-            <div class="employee-slider-middle employee-slider-middle-medium ribbon">
-              <h3>Emplyee SLider</h3> col-lg-3
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- MEDIUM-->
-
-    <!-- SMALL VIEW -->
-    <div id="large-view" v-if="$mq === 'sm'"> <!-- VIEW: Main Large -->
-      <div class="row no-gutters">
-        <div class="col-12 vertical-slider vertical-slider-small">
-          <div class="vertical-slider-middle vertical-slider-middle-small">
-            <h1>Vertical Slider</h1>
-            <h2>{{$mq}}</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-12">
-          <div class="recent-log recent-log-small">
-            <div class="recent-log-middle recent-log-middle-small ribbon">
-              <h3>Recent Log</h3> col-lg-5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-12">
-          <div class="employee-slider employee-slider-small">
-            <div class="employee-slider-middle employee-slider-middle-small ribbon">
-              <h3>Employee Slide</h3> col-lg-5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-12">
-          <div class="event-log event-log-small">
-            <div class="event-log-middle event-log-middle-small ribbon">
-              <h3>Event Log</h3> col-lg-5
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!--  SMALL -->
+    <!-- show_main_view : is defined in home/route.js -->
+    <v-MainView v-if="show_main_view"/>
 
     <!-- FOOTER -->
     <div class="row no-gutters">
-      <div class="col-12  dsti-blue-bg">
+      <div class="col-12">
         <v-footerMenu />
       </div>
     </div>
-  <!-- VIEW: Main Medium -->
 
-
-  <!-- VIEW: Main Small -->
-
-
-    <!-- <router-view/> -->
     <vue-snotify></vue-snotify>
   </div>
+        <!-- <router-view /> -->
 </template>
 
 <script>
 import mainMenu from '../src/components/navigation/mainMenu'
 import adminMenu from '../src/components/navigation/adminMenu'
 import mainMenuSub from '../src/components/navigation/mainMenuSub'
+import MainView from '../src/components/view/main'
+import AdminToolsView from '../src/components/view/adminTools'
 import footerMenu from '../src/components/navigation/mainFooter'
 import slider from '../src/components/widget/slider'
 import searchbar from '../src/components/widget/searchbar'
@@ -174,19 +52,34 @@ export default {
   name: "App",
   data() {
     return {
-      admin_view: true
+      show_admin_view: this.showAdminMenu,
+      show_main_view: this.show_main_view,
+      show_sub_menu: false
     };
   },
+  computed: {
+    showSubMenu: function () {
+      if(this.$mq != 'sm' && !this.show_admin_view) {
+        return this.show_sub_menu = true;
+      }
+    }
+  },
+  created () {
+       this.show_admin_view = this.$route.meta.displayAdminMenu,
+       this.show_main_view = this.$route.meta.show_main_view
+   },
   mounted() {
     this.$nextTick(() => {
       // run JQUERY HERE!
-      $('#app').hide().fadeIn('slow');
+      // $('#app').hide().fadeIn('slow');
     });
   },
   components: {
     'v-mainMenu': mainMenu,
     'v-mainMenuSub': mainMenuSub,
     'v-adminMenu': adminMenu,
+    'v-MainView': MainView,
+    'v-AdminToolsView': AdminToolsView,
     'v-footerMenu': footerMenu,
     'v-slider': slider,
     'v-searchbar': searchbar

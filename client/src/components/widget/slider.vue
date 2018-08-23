@@ -51,3 +51,16 @@ export default {
    destroy () {}
 }
 </script>
+
+<style scoped>
+    #slider {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    }
+
+</stlye>

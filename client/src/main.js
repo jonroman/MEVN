@@ -8,7 +8,7 @@ import App from './App'
 // import MainFooter from './components/navigation/mainFooter.vue'
 import router from './router'
 
-//JQUERY
+// JQUERY
 import jQuery from 'jquery'
 global.jQuery = jQuery
 global.$ = jQuery
@@ -32,6 +32,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 Vue.use(Vuetify)
+
 // SNOTIFY
 import Snotify from 'vue-snotify'
 import 'vue-snotify/styles/material.css'

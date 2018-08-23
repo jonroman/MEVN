@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-menu main-menu-large dsti-blue-bg">
     <nav id="main-menu" class="navbar navbar-expand-lg">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">

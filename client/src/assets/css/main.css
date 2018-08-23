@@ -49,6 +49,16 @@
 .main-menu-small {
 }
 
+.admin-menu {
+    height: 100%;
+}
+.admin-menu-large {
+}
+.admin-menu-medium {
+}
+.admin-menu-small {
+}
+
 .sub-main-menu {
 }
 .sub-main-menu-large {
@@ -267,11 +277,58 @@
     height: 96%;
 }
 
+.spa {
+    /* background-color: teal; */
+}
+.spa-large {
+    height: 500px;
+}
+.spa-medium {
+
+}
+.spa-small {
+
+}
+.spa-middle {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    text-align: center;
+    background-color: white;
+}
+
+.tool-menu {
+    /* background-color: yellow; */
+}
+.tool-menu-large {
+
+}
+.tool-menu-medium {
+
+}
+.tool-menu-small {
+
+}
+.tool-menu-middle {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    text-align: center;
+    background-color: white;
+}
+
 .footer-menu {
-    background-color: rgb(22, 61, 94);
+    background-color: darkcyan;
+    border: solid black;
 }
 .footer-menu-large {
-    height: 300px;
+    height: 150px;
 }
 .footer-menu-medium {
     height: 150px;
@@ -282,5 +339,5 @@
 
 .ribbon {
     border-top: solid  rgb(189, 104, 47);
-    border-top-width: 3px;
+    border-top-width: 5px;
 }
