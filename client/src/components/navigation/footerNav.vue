@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 export default {
   name: "MainFooter",
   data() {
@@ -15,4 +16,9 @@ export default {
 </script>
 
 <style scoped>
+.vue-back-to-top {
+  background-color: grey;
+  color: white;
+}
+
 </style>

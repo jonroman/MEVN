@@ -8,7 +8,7 @@
       </div>
       <div class="col-10" v-if="show_admin_view">
         <v-mainMenu />
-        <v-mainMenuSub class="sub-main-menu-large dsti-white-bg" />
+        <v-mainMenuSub />
         <v-AdminToolsView /> <!-- nested -->
       </div>
       <div class="col-12" v-if="show_main_view">
@@ -19,7 +19,7 @@
     <!-- SUB MENU -->
     <div class="row no-gutters" v-if="showSubMenu">
       <div class="col-12 ">
-        <v-mainMenuSub class="sub-main-menu-large dsti-white-bg" />
+        <v-mainMenuSub />
       </div>
     </div>
 
@@ -33,20 +33,26 @@
       </div>
     </div>
 
+    <back-to-top text="top" visibleoffset="40" bottom="50px" right="40px">
+        <v-icon x-large>fa-chevron-up</v-icon>
+    </back-to-top>
     <vue-snotify></vue-snotify>
+
   </div>
         <!-- <router-view /> -->
 </template>
 
 <script>
-import mainMenu from '../src/components/navigation/mainMenu'
-import adminMenu from '../src/components/navigation/adminMenu'
-import mainMenuSub from '../src/components/navigation/mainMenuSub'
+import mainMenu from '../src/components/navigation/mainNav'
+import adminMenu from '../src/components/navigation/adminNav'
+import mainMenuSub from '../src/components/navigation/subNav'
 import MainView from '../src/components/view/main'
 import AdminToolsView from '../src/components/view/adminTools'
-import footerMenu from '../src/components/navigation/mainFooter'
+import footerMenu from '../src/components/navigation/footerNav'
 import slider from '../src/components/widget/slider'
 import searchbar from '../src/components/widget/searchbar'
+
+
 /* eslint-disable */
 export default {
   name: "App",

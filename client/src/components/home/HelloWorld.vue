@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import DeptMenu from '../navigation/deptMenu'
+import DeptMenu from '../navigation/deptNav'
 import Slider from '../widget/slider'
 
 export default {

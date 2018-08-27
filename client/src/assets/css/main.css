@@ -41,10 +41,13 @@
 }
 
 .main-menu {
+    /* background-color: orange; */
 }
 .main-menu-large {
+    height: 95px;
 }
 .main-menu-medium {
+    height: 95px;
 }
 .main-menu-small {
 }
@@ -65,7 +68,7 @@
     height: 30px;
 }
 .sub-main-menu-medium {
-    height: 20px;
+    height: 30px;
 }
 .sub-main-menu-small {
     display: none;
@@ -340,4 +343,43 @@
 .ribbon {
     border-top: solid  rgb(189, 104, 47);
     border-top-width: 5px;
+}
+
+.mydsti-logo {
+    /* background-color: darkorange; */
+    background-image: url("../mydstilogo.jpg");
+    background-repeat: none;
+}
+.mydsti-logo-large {
+    width: 150px;
+    height: 55px;;
+    margin-right: 50px;
+}
+.mydsti-logo-medium {
+    width: 150px;
+    height: 55px;;
+    margin-right: 50px;
+}
+.mydsti-logo-small {
+    width: 75px;
+    height: 20px;;
+}
+
+.right {
+    float: right;
+}
+
+.upper-or-lower-toggle {
+    text-transform: uppercase;
+}
+
+.vue-back-to-top {
+    padding: 5px;
+    border-radius: 8%;
+    background-color: grey;
+    color: white;
+}
+
+.default {
+    display:none;
 }
