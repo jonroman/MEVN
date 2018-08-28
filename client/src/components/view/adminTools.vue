@@ -3,7 +3,7 @@
     <div class="row no-gutters" v-if="$mq == 'lg'">
         <div class="col-8 spa spa-large">
             <div class="spa-middle ribbon">
-                this is the spa
+                <router-view />
             </div>
         </div>
         <div class="col-4 tool-menu">

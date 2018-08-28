@@ -1,29 +1,46 @@
 <template>
-    <div id="admin-menu" class="admin-menu admin-menu-large dsti-blue-bg">
-        <ul class="nav flex-column dsti-blue-bg">
-            <li class="nav-item"><a class="nav-link" href="/">myDSTI</a></li>
-            <li class="nav-item"><a class="nav-link" href="/posts">Posts</a></li>
-        </ul>
+    <div class="admin-menu admin-menu-large dsti-blue-bg">
+        <div id="user-profile" class="dsti-admin-blue-bg ">
+            <img src="../../assets/profilePlaceHolder.jpg">
+        </div>
+            <div id="admin-menu">
+                <!-- BOOTSTRAP accordion -->
+                <div id="accordion">
+                    <v-admin-menu-module
+                        moduleName="profile"
+                        v-bind:moduleItems="[{name: 'view', href: '/users'}, {name: 'edit', href: '/users/edit'}]"
+                    ></v-admin-menu-module>
+                    <v-admin-menu-module
+                        moduleName="users"
+                        v-bind:moduleItems="[{name: 'view', href: '/users'}, {name: 'edit', href: '/users/edit'}]"
+                    ></v-admin-menu-module>
+                    <v-admin-menu-module
+                        moduleName="posts"
+                        v-bind:moduleItems="[{name: 'new', href: '/posts/new'}, {name: 'edit', href: '/posts/edit'}]"
+                    ></v-admin-menu-module>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import AdminMenuModule from '../navigation/menu/admin'
 export default {
    name: 'AdminMenu',
    data () {
        return {
-           showAdminMenu: false
        }
+   },
+   components: {
+       'v-admin-menu-module': AdminMenuModule
    },
    beforeCreated () {
    },
    created () {
-       console.log('showAdminMenu', this.$route.meta.displayAdminMenu)
-       this.showAdminMenu = this.$route.meta.displayAdminMenu
    },
    mounted () {
        //JQUERY here!
-    //    $('#admin-menu').hide.show('slow');
    },
    beforeDestroy () {},
    destroy () {}
@@ -31,12 +48,8 @@ export default {
 </script>
 
 <style scoped>
-    #admin-menu {
-        height: 100%;
-        width: 100%;
-        border-right: solid  rgb(221, 221, 221);
-        border-bottom: solid  rgb(221, 221, 221);
-        border-width: 1px;
+    #user-profile {
+        padding-left:auto;
+        padding-right:auto;
     }
-
 </style>

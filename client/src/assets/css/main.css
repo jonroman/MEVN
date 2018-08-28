@@ -1,5 +1,8 @@
 /*** Main View ***/
 /* Modules */
+.dsti-admin-blue-bg {
+    background-color: rgb(45, 62, 80);
+}
 .dsti-blue-bg {
     background-color: rgb(58, 80, 104);
 }
@@ -54,6 +57,10 @@
 
 .admin-menu {
     height: 100%;
+    width: 100%;
+    border-right: solid  rgb(221, 221, 221);
+    border-bottom: solid  rgb(221, 221, 221);
+    border-width: 1px;
 }
 .admin-menu-large {
 }
