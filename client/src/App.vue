@@ -93,6 +93,8 @@ export default {
 };
 // CSS
 require('../src/assets/css/main.css')
+// animation css https://www.npmjs.com/package/animate.css https://daneden.github.io/animate.css/
+require('../node_modules/animate.css')
 </script>
 
 <style>

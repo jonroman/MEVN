@@ -7,7 +7,13 @@
     background-color: rgb(58, 80, 104);
 }
 .dsti-orange-bg {
-    background-color: rgb(189, 104, 47);
+    background-color: rgb(188, 104, 47);
+}
+.dsti-orange-text {
+    color: rgb(188, 104, 47);
+}
+.dsti-orange-bg-active {
+    background-color: rgb(203, 128, 73);
 }
 .dsti-grey-bg {
     background-color: rgb(221, 221, 221);
@@ -34,13 +40,6 @@
     width: 50%;
     height: 50%;
     text-align: center;
-}
-
-.borderitpink { /* For testing layout */
-    border: solid rgb(228, 8, 129);
-}
-.borderitblack { /* For testing layout */
-    border: solid black;
 }
 
 .main-menu {
@@ -85,10 +84,10 @@
     /* background-color: green; */
 }
 .vertical-slider-large {
-    height: 350px;
+    height: 494px;
 }
 .vertical-slider-medium {
-    height: 300px;
+    height: 500px;
 }
 .vertical-slider-small {
     height: 200px;
@@ -112,7 +111,7 @@
     /* background-color: chartreuse; */
 }
 .search-bar-large {
-    height: 100px;
+    height: 150px;
 }
 .search-bar-medium {
     height: 75px;
@@ -137,7 +136,7 @@
     /* background-color: darkgoldenrod; */
 }
 .quick-links-large {
-    height: 275px;
+    height: 380px;
 }
 .quick-links-medium {
     display: none;
@@ -148,7 +147,7 @@
 .quick-links-middle {
     position: relative;
     left: 49%;
-    top: 45%;
+    top: 43%;
     transform: translate(-50%, -50%);
     width: 96%;
     height: 93%;
@@ -171,7 +170,7 @@
 .event-log-middle {
     position: relative;
     left: 52%;
-    top: 40%;
+    top: 52%;
     transform: translate(-50%, -50%);
     /* unnecessary styling properties */
     width: 95%;
@@ -209,7 +208,7 @@
 .employee-slider-middle {
     position: relative;
     left: 52%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 95%;
     height: 90%;
@@ -244,7 +243,7 @@
 .recent-log-middle {
     position: relative;
     left: 50%;
-    top: 45%;
+    top: 51%;
     transform: translate(-50%, -50%);
     width: 95%;
     height: 95%;
@@ -274,7 +273,7 @@
 .im-middle {
     position: relative;
     left: 49%;
-    top: 45%;
+    top: 51%;
     transform: translate(-50%, -50%);
     width: 96%;
     height: 95%;
