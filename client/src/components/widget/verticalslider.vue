@@ -3,7 +3,7 @@
     <div class="slider" :class="{'animated': animate, 'bounceInUp': enter, 'zoomOut': exit}">
       <a :href="href">
         <img v-if="$mq !== 'sm'" class="feature-img" :src="slides[index].picSrc" />
-        <img v-else class="feature-img resize-image" :src="slides[index].picSrc" />
+        <img v-else class="feature-img mobile-image" :src="slides[index].picSrc" />
       </a>
     </div>
     <div v-if="$mq !== 'sm'" class="post-tag">
@@ -21,7 +21,7 @@
         {{ slides[index].numComments }}
       </div>
     </div>
-    <div v-if="$mq !== 'sm'" class="buttons">
+    <div v-if="$mq !== 'sm'" class="buttons" :class="{'buttons-lg': $mq === 'lg', 'buttons-md': $mq == 'md'}">
         <div class="button" v-for="(button, key) in slides" :id="`button_`+key">
             <div v-if="`${index}` == key" class="arrow show animated" :class="{'animated': animateButton, 'shake': (index === key)}">
             <div class="pointer">
@@ -172,17 +172,24 @@ export default {
     .feature-img {
     }
 
-    .resize-image {
+    .mobile-image {
         height: 100%;
         width: 100%;
     }
 
     .buttons {
         position: absolute;
-        width: 30%;
         height: 100%;
         right: 0px;
         overflow: hidden;
+    }
+
+    .buttons-lg {
+        width: 35%;
+    }
+
+    .buttons-md {
+        width: 25%;
     }
 
     .button {
