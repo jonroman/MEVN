@@ -4,6 +4,7 @@ import NewPost from './view/NewPost.vue'
 import EditPost from './view/EditPost.vue'
 
 let meta = {
+  show_main_view: false,
   displayMainMenu: false,
   displayAdminMenu: true,
   displayWidgetMenu: true
