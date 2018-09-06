@@ -8,15 +8,24 @@
                 <div id="accordion">
                     <v-admin-menu-module
                         moduleName="profile"
-                        v-bind:moduleItems="[{name: 'view', href: '/users'}, {name: 'edit', href: '/users/edit'}]"
+                        v-bind:moduleItems="[
+                            {name: 'view', href: '/users'},
+                            {name: 'edit', href: '/users/edit'}
+                        ]"
                     ></v-admin-menu-module>
                     <v-admin-menu-module
                         moduleName="users"
-                        v-bind:moduleItems="[{name: 'view', href: '/users'}, {name: 'edit', href: '/users/edit'}]"
+                        v-bind:moduleItems="[
+                            {name: 'view', href: '/users'},
+                            {name: 'edit', href: '/users/edit'}
+                        ]"
                     ></v-admin-menu-module>
                     <v-admin-menu-module
                         moduleName="posts"
-                        v-bind:moduleItems="[{name: 'new', href: '/posts/new'}, {name: 'edit', href: '/posts/edit'}]"
+                        v-bind:moduleItems="[
+                            {name: 'View All', href: '/posts'},
+                            {name: 'New', href: '/posts/new'}
+                        ]"
                     ></v-admin-menu-module>
                 </div>
             </div>

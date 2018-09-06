@@ -1,19 +1,19 @@
-import Hello from './HelloWorld.vue'
+import Home from './main.vue'
 
 let meta = {
   show_main_view: true,
-  displayMainMenu: true,
-  displayMainMenuSub: true,
-  displayAdminMenu: false,
-  displayWidgetMenu: true
+  displayMainNav: true,
+  displaySubNav: true,
+  displayAdminNav: false,
+  displayWidgetNav: false
 }
 
 let routes = [
   {
     path: '/',
-    name: 'HelloWorld',
+    name: 'HomePage',
     meta,
-    component: Hello
+    component: Home
   }
 ]
 
