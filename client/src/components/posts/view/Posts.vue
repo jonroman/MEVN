@@ -27,7 +27,6 @@
               There are no posts.. Lets add one now <br /><br />
               <router-link v-bind:to="{ name: 'NewPost' }" class="add_post_link">Add Post</router-link>
             </div>
-            <vue-snotify></vue-snotify>
           </div>
         </div>
 </template>

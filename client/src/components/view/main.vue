@@ -4,13 +4,13 @@
       <div class="row no-gutters">
        <div class="col-8 vertical-slider vertical-slider-large animated zoomInUp">
          <div class="vertical-slider-middle">
-           <v-verticalSlider></v-verticalSlider>
+           <VerticalSlider />
          </div>
        </div>
        <div class="col-4">
          <div class="search-bar-large animated bounceInRight">
            <div class="search-bar-middle">
-             <h3>Search Bar</h3> col-lg-4
+             <SearchBar />
            </div>
          </div>
          <div class="quick-links quick-links-large animated bounceInRight">
@@ -55,7 +55,7 @@
       <div class="row no-gutters">
         <div class="col-12 vertical-slider vertical-slider-large animated zoomInUp">
           <div class="vertical-slider-middle">
-           <v-verticalSlider></v-verticalSlider>
+            <VerticalSlider />
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
         <div class="col-4">
           <div class="search-bar-medium animated bounceInRight">
             <div class="search-bar-middle search-bar-middle-medium ribbon">
-              <h3>Search Bar</h3> col-lg-4
+             <SearchBar />>
             </div>
           </div>
           <div class="im im-medium animated bounceInRight">
@@ -97,7 +97,7 @@
       <div class="row no-gutters">
         <div class="col-12 vertical-slider vertical-slider-small animated zoomInUp">
           <div class="vertical-slider-middle vertical-slider-middle-small">
-            <v-verticalSlider></v-verticalSlider>
+            <VerticalSlider />
           </div>
         </div>
       </div>
@@ -134,6 +134,7 @@
 
 <script>
 import VerticalSlider from '../widget/verticalslider'
+import SearchBar from '../widget/searchbar'
 export default {
    name: 'MainView',
    data () {
@@ -142,7 +143,8 @@ export default {
        }
    },
    components: {
-     'v-verticalSlider': VerticalSlider
+     'VerticalSlider': VerticalSlider,
+     'SearchBar': SearchBar
    },
    beforeCreated () {},
    created () {
