@@ -1,85 +1,46 @@
 <template>
-    <div id="searchbar">
-        <v-form>
-    <v-container>
-      <v-layout row wrap>
-
-        <!-- <v-flex xs12 sm6 md3>
-          <v-text-field
-            label="Regular"
-          ></v-text-field>
-        </v-flex>
-
-        <v-flex xs12 sm6 md3>
-          <v-text-field
-            label="Regular"
-            placeholder="Placeholder"
-          ></v-text-field>
-        </v-flex>
-
-        <v-flex xs12 sm6 md3>
-          <v-text-field
-            label="Solo"
-            solo
-          ></v-text-field>
-        </v-flex>
-
-        <v-flex xs12 sm6 md3>
-          <v-text-field
-            label="Solo"
-            placeholder="Placeholder"
-            solo
-          ></v-text-field>
-        </v-flex>
-
-        <v-flex xs12 sm6 md3>
-          <v-text-field
-            label="Box"
-            box
-          ></v-text-field>
-        </v-flex> -->
-
-        <v-flex xs12>
-          <v-text-field
-            label=""
-            placeholder="Search"
-            box
-          ></v-text-field>
-        </v-flex>
-
-        <!-- <v-flex xs12 sm6 md3>
-          <v-text-field
-            label="Outline"
-            outline
-          ></v-text-field>
-        </v-flex>
-
-        <v-flex xs12 sm6 md3>
-          <v-text-field
-            label="Outline"
-            placeholder="Placeholder"
-            outline
-          ></v-text-field>
-        </v-flex> -->
-
-      </v-layout>
-    </v-container>
-  </v-form>
-    </div>
+  <div id="search-bar">
+    <v-form>
+    <!-- EXAMPLE https://codepen.io/pen/?editors=1010 -->
+      <v-text-field
+        v-model="criteria"
+        box
+        label="SEARCH"
+        append-icon="search"
+        append-icon-cb="true"
+        clearable
+        height="90%"
+        color="orange darken-3"
+        @click:append="search"
+       ></v-text-field>
+    </v-form>
+  </div>
+<!-- rgba(188, 104, 47) -->
 </template>
 
 <script>
 export default {
-   name: 'searchbar',
-   props: {
-   },
-   data () {
-       return {}
-   },
-   beforeCreated () {},
-   created () {},
-   mounted () { },
-   beforeDestroy () {},
-   destroy () {}
+  name: 'searchbar',
+  props: {},
+  methods: {
+    search: function() {
+      if(this.criteria.length > 0) {
+        this.$router.push({path: '/results/'+this.criteria});
+      }
+    }
+  }
 }
 </script>
+
+<style scoped>
+  #search-bar {
+    background-color: lightgrey;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 96%;
+    height: 65%;
+    text-align: center;
+  }
+</style>
