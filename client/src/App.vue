@@ -3,33 +3,34 @@
     <!-- MAIN MENU -->
     <div class="row no-gutters">
       <!-- SHOW ADMIN and Main Menu -->
-      <div class="col-2" v-if="show_admin_view">
-        <v-adminMenu />
+      <div class="col-2" v-if="showAdminNav">
+        <AdminNav />
       </div>
-      <div class="col-10" v-if="show_admin_view">
-        <v-mainMenu />
-        <v-mainMenuSub />
-        <v-AdminToolsView /> <!-- nested -->
+      <div class="col-10" v-if="showAdminNav">
+        <MainNav />
+        <SubNav />
+        <router-view class="animated lightSpeedIn" />
       </div>
-      <div class="col-12" v-if="show_main_view">
-        <v-mainMenu />
+      <div class="col-12" v-if="!showAdminNav">
+        <MainNav />
       </div>
     </div>
 
     <!-- SUB MENU -->
-    <div class="row no-gutters" v-if="showSubMenu">
+    <div class="row no-gutters" v-if="showSubNav">
       <div class="col-12 ">
-        <v-mainMenuSub />
+        <SubNav />
       </div>
     </div>
 
-    <!-- show_main_view : is defined in home/route.js -->
-    <v-MainView v-if="show_main_view"/>
+    <div v-if="!showAdminNav">
+      <router-view />
+    </div>
 
     <!-- FOOTER -->
     <div class="row no-gutters">
       <div class="col-12">
-        <v-footerMenu />
+        <FooterNav />
       </div>
     </div>
 
@@ -39,18 +40,13 @@
     <vue-snotify></vue-snotify>
 
   </div>
-        <!-- <router-view /> -->
 </template>
 
 <script>
-import mainMenu from '../src/components/navigation/mainNav'
-import adminMenu from '../src/components/navigation/adminNav'
-import mainMenuSub from '../src/components/navigation/subNav'
-import MainView from '../src/components/view/main'
-import AdminToolsView from '../src/components/view/adminTools'
-import footerMenu from '../src/components/navigation/footerNav'
-import slider from '../src/components/widget/slider'
-import searchbar from '../src/components/widget/searchbar'
+import MainNav from '../src/components/navigation/mainNav'
+import AdminNav from '../src/components/navigation/adminNav'
+import SubNav from '../src/components/navigation/subNav'
+import FooterNav from '../src/components/navigation/footerNav'
 
 
 /* eslint-disable */
@@ -58,22 +54,18 @@ export default {
   name: "App",
   data() {
     return {
-      show_admin_view: this.showAdminMenu,
-      show_main_view: this.show_main_view,
-      show_sub_menu: false
+      showAdminNav: this.$route.meta.displayAdminNav,
+      showMainNav: this.$route.meta.displayMainNav,
+      showSubNav: this.$route.meta.displaySubNav
     };
   },
-  computed: {
-    showSubMenu: function () {
-      if(this.$mq != 'sm' && !this.show_admin_view) {
-        return this.show_sub_menu = true;
-      }
+  watch: {
+    $route: function (to, from) {
+       this.showAdminNav = this.$route.meta.displayAdminNav,
+       this.showMainNav = this.$route.meta.displayMainNav,
+       this.showSubNav = this.$route.meta.displaySubNav
     }
   },
-  created () {
-       this.show_admin_view = this.$route.meta.displayAdminMenu,
-       this.show_main_view = this.$route.meta.show_main_view
-   },
   mounted() {
     this.$nextTick(() => {
       // run JQUERY HERE!
@@ -81,14 +73,10 @@ export default {
     });
   },
   components: {
-    'v-mainMenu': mainMenu,
-    'v-mainMenuSub': mainMenuSub,
-    'v-adminMenu': adminMenu,
-    'v-MainView': MainView,
-    'v-AdminToolsView': AdminToolsView,
-    'v-footerMenu': footerMenu,
-    'v-slider': slider,
-    'v-searchbar': searchbar
+    'MainNav': MainNav,
+    'SubNav': SubNav,
+    'AdminNav': AdminNav,
+    'FooterNav': FooterNav
   }
 };
 // CSS

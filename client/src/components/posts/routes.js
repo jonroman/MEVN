@@ -1,22 +1,14 @@
-import Datatable from './view/Datatable.vue'
 import Posts from './view/Posts.vue'
 import NewPost from './view/NewPost.vue'
 import EditPost from './view/EditPost.vue'
 
 let meta = {
-  show_main_view: false,
-  displayMainMenu: false,
-  displayAdminMenu: true,
-  displayWidgetMenu: true
+  displayMainNav: true,
+  displayAdminNav: true,
+  displayWidgetNav: true
 }
 
 let routes = [
-  {
-    path: '/datatable',
-    name: 'Datatable',
-    component: Datatable,
-    meta
-  },
   {
     path: '/posts',
     name: 'Posts',

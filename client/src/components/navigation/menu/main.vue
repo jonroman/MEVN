@@ -2,29 +2,24 @@
     <div id="main-menu">
         {{setClasses}}
         <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle active">
-            <a v-bind:class="{'nav-link': cNavLink}" href="/">
+            <router-link :class="{'nav-link': cNavLink}" to="/">
                 mydsti <span class="sr-only">(current)</span>
-            </a>
+            </router-link>
         </li>
         <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle">
-            <a v-bind:class="{'nav-link': cNavLink}" href="/">
-                projectflow
-            </a>
+            <router-link :class="{'nav-link': cNavLink}" to="/profile">
+                profile <span class="sr-only">(current)</span>
+            </router-link>
         </li>
         <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle">
-            <a v-bind:class="{'nav-link': cNavLink}" href="/">
-                employee
-            </a>
+            <router-link :class="{'nav-link': cNavLink}" to="/posts">
+                posts <span class="sr-only">(current)</span>
+            </router-link>
         </li>
         <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle">
-            <a v-bind:class="{'nav-link': cNavLink}" href="/">
-                admin
-            </a>
-        </li>
-        <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle">
-            <a v-bind:class="{'nav-link': cNavLink}" href="/">
-                epicor
-            </a>
+            <router-link :class="{'nav-link': cNavLink}" to="/admin">
+                admin <span class="sr-only">(current)</span>
+            </router-link>
         </li>
     </div>
 </template>
