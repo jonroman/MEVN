@@ -15,7 +15,7 @@ allRoutes = allRoutes.concat(AdminRoutes);
 import {default as PostsRoutes} from '../components/posts/routes'
 allRoutes = allRoutes.concat(PostsRoutes);
 
-// Posts routes
+// Results routes
 import {default as ResultsRoutes} from '../components/results/routes'
 allRoutes = allRoutes.concat(ResultsRoutes);
 

@@ -4,7 +4,7 @@ let meta = {
   show_main_view: true,
   displayMainNav: true,
   displaySubNav: true,
-  displayAdminNav: false,
+  displayAdminNav: true,
   displayWidgetNav: false
 }
 
