@@ -5,7 +5,12 @@ import EditPost from './view/EditPost.vue'
 let meta = {
   displayMainNav: true,
   displayAdminNav: true,
-  displayWidgetNav: true
+  displayWidgetNav: true,
+  subMenu: [
+    {name: 'Home', href: '/', target: 'self'},
+    {name: 'Posts', href: '/posts', target: 'self'},
+    {name: 'New', href: '/posts/new', target: 'self'}
+  ]
 }
 
 let routes = [
@@ -17,13 +22,13 @@ let routes = [
   },
   {
     path: '/posts/new',
-    name: 'NewPost',
+    name: 'New Post',
     component: NewPost,
     meta
   },
   {
     path: '/posts/:id',
-    name: 'EditPost',
+    name: 'Edit Post',
     component: EditPost,
     meta
   }

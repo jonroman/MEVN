@@ -2,22 +2,22 @@
     <div id="main-menu">
         {{setClasses}}
         <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle active">
-            <router-link :class="{'nav-link': cNavLink}" to="/">
+            <router-link class="dsti-link" :class="{'nav-link': cNavLink}" to="/">
                 mydsti <span class="sr-only">(current)</span>
             </router-link>
         </li>
         <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle">
-            <router-link :class="{'nav-link': cNavLink}" to="/profile">
+            <router-link class="dsti-link" :class="{'nav-link': cNavLink}" to="/profile">
                 profile <span class="sr-only">(current)</span>
             </router-link>
         </li>
         <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle">
-            <router-link :class="{'nav-link': cNavLink}" to="/posts">
+            <router-link class="dsti-link" :class="{'nav-link': cNavLink}" to="/posts">
                 posts <span class="sr-only">(current)</span>
             </router-link>
         </li>
         <li v-bind:class="{'menu-link': cMenuLink, 'nav-item': cNavItem}" class="upper-or-lower-toggle">
-            <router-link :class="{'nav-link': cNavLink}" to="/admin">
+            <router-link class="dsti-link" :class="{'nav-link': cNavLink}" to="/admin">
                 admin <span class="sr-only">(current)</span>
             </router-link>
         </li>
@@ -57,19 +57,20 @@ export default {
 <style scoped>
     .menu-link {
         list-style: none;
-        border-bottom: solid grey;
+        border-bottom: solid grey 2px;
         color: white;
         margin-left: 40px;
         font-size: .8em;
-        border-bottom-width: 1px;
         float: left;
         margin-top: 10px;
+        padding-bottom: 4px;
     }
 
     a {
         color: white;
     }
     .nav-item {
+        padding-left: 10px;
         border-bottom: solid grey;
         color: white;
         font-size: .8em;
@@ -78,7 +79,7 @@ export default {
     }
 
     .active {
-        background-color:  rgb(189, 104, 47);
+        /* background-color:  rgb(189, 104, 47); */
     }
 
     .arrow {

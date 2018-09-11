@@ -11,10 +11,9 @@
             :class="{'show-items': isActive}"
             class="admin_menu_item upper-or-lower-toggle hide-items menu-ribbon"
             >
-            <router-link :class="{'nav-link': cNavLink}" :to="`${item.href}`">
+            <router-link :to="`${item.href}`">
                 {{ item.name }}<span class="sr-only">(current)</span>
             </router-link>
-                <!-- <a :href="`${item.href}`"> {{ item.name }} </a> -->
         </div>
     </div>
 </template>
