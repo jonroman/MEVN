@@ -4,8 +4,9 @@ let meta = {
   show_main_view: true,
   displayMainNav: true,
   displaySubNav: true,
-  displayAdminNav: true,
-  displayWidgetNav: false
+  displayAdminNav: false,
+  displayWidgetNav: false,
+  subMenu: []
 }
 
 let routes = [

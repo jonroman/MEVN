@@ -21,6 +21,18 @@
 .dsti-white-bg {
     background-color: white;
 }
+.dsti-dark-grey-bg {
+    background-color: rgb(128, 128, 128);
+}
+.dsti-red-bg {
+    background-color: rgb(194, 97, 88);
+}
+.dsti-teal-bg {
+    background-color: rgb(121, 163, 167);
+}
+.dsti-green-bg {
+    background-color: rgb(139, 151, 106);
+}
 
 /* helpers */
 .outer {
@@ -43,10 +55,9 @@
 }
 
 .main-menu {
-    /* background-color: orange; */
 }
 .main-menu-large {
-    height: 95px;
+    height: 125px;
 }
 .main-menu-medium {
     height: 95px;
@@ -71,10 +82,10 @@
 .sub-main-menu {
 }
 .sub-main-menu-large {
-    height: 30px;
+    height: 50px;
 }
 .sub-main-menu-medium {
-    height: 30px;
+    height: 50px;
 }
 .sub-main-menu-small {
     display: none;
@@ -389,3 +400,8 @@
 .default {
     display:none;
 }
+
+
+  nav.navbar {
+    padding: 0px;
+  }

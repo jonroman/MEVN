@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class=".container-fluid dsti-grey-bg">
+  <div id="app" class=".container-fluid dsti-grey-bg" @keydown.enter.prevent>
     <!-- MAIN MENU -->
     <div class="row no-gutters">
       <!-- SHOW ADMIN and Main Menu -->
@@ -9,7 +9,7 @@
       <div class="col-10" v-if="showAdminNav">
         <MainNav />
         <SubNav />
-        <router-view class="animated lightSpeedIn" />
+        <router-view class="animated bounceInUp"/>
       </div>
       <div class="col-12" v-if="!showAdminNav">
         <MainNav />
@@ -61,9 +61,21 @@ export default {
   },
   watch: {
     $route: function (to, from) {
-       this.showAdminNav = this.$route.meta.displayAdminNav,
-       this.showMainNav = this.$route.meta.displayMainNav,
+       this.showAdminNav = this.$route.meta.displayAdminNav
+       this.showMainNav = this.$route.meta.displayMainNav
        this.showSubNav = this.$route.meta.displaySubNav
+       this.hideShowAdminMenu()
+    },
+    $mq: function() {
+      this.hideShowAdminMenu()
+    }
+  },
+  methods: {
+    hideShowAdminMenu: function() {
+      this.showAdminNav =  this.$route.meta.displayAdminNav
+      if(this.$mq === 'sm') {
+        this.showAdminNav =  false
+      }
     }
   },
   mounted() {
@@ -81,6 +93,7 @@ export default {
 };
 // CSS
 require('../src/assets/css/main.css')
+require('../src/assets/css/fonts.css')
 // animation css https://www.npmjs.com/package/animate.css https://daneden.github.io/animate.css/
 require('../node_modules/animate.css')
 </script>

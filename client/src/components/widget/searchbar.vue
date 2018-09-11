@@ -7,11 +7,11 @@
         box
         label="SEARCH"
         append-icon="search"
-        append-icon-cb="true"
         clearable
         height="90%"
         color="orange darken-3"
-        @click:append="search"
+        @click:append="search()"
+        @keyup.native.enter="search()"
        ></v-text-field>
     </v-form>
   </div>
@@ -22,9 +22,15 @@
 export default {
   name: 'searchbar',
   props: {},
+  data() {
+    return {
+      criteria: ''
+    }
+  },
   methods: {
     search: function() {
       if(this.criteria.length > 0) {
+        console.log('you hit enter fucker');
         this.$router.push({path: '/results/'+this.criteria});
       }
     }

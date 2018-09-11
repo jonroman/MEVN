@@ -5,12 +5,12 @@
     <!-- LARGE and MEDIUM -->
     <div id="MainNav" v-if="$mq != 'sm'" class="main-menu-large">
         <div id="menu-large">
-            <div>
-                <v-MainMenu />
-            </div>
+            <MainMenu />
         </div>
         <div>
-            <div id="logo">myDSTI</div>
+            <div id="logo">
+                <h1 class="dsti-title">{{ pageTitle }}</h1>
+            </div>
         </div>
     </div>
 
@@ -28,20 +28,11 @@
             <div id="tools" >
                 <img src="../../assets/smallmenutools.jpg" />
             </div>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="collapse navbar-collapse" :class="{'show': show}" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <v-MainMenu />
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Home <span class="sr-only">(current)</span></a>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li> -->
+                    <AdminNav v-if="showAdminNav" />
+                    <SubNav />
+                    <MainMenu />
                 </ul>
             </div>
         </nav>
@@ -51,25 +42,30 @@
 
 <script>
 import MainMenu from '../navigation/menu/main'
+import AdminNav from '../navigation/adminNav'
+import SubNav from '../navigation/subNav'
 
 export default {
    name: 'MainNav',
    data () {
        return {
-           mainmenu: false
+           show: true,
+           pageTitle: "myDSTI",
+           showAdminNav: this.$route.meta.displayAdminNav
        }
    },
-   beforeCreated () {
-       console.log("************ beforeCreated life cycle ************")
+   watch: {
+       $route: function () {
+           this.pageTitle = this.$route.name
+           this.showAdminNav = this.$route.meta.displayAdminNav
+       }
    },
-   created () {
-       this.mainmenu = this.$route.meta.displayMainMenu
+   methods: {
    },
-   mounted () {},
-   beforeDestroy () {},
-   destroy () {},
    components: {
-       'v-MainMenu': MainMenu
+       'MainMenu': MainMenu,
+       'AdminNav': AdminNav,
+       'SubNav': SubNav
    }
 }
 </script>
@@ -84,7 +80,7 @@ export default {
     color: white;
     font-size: .8em;
     width: auto;
-    padding-bottom: 0px;
+    padding: 10px 0px 0px 0px;
     border-bottom-width: thin;
 }
 
@@ -93,16 +89,14 @@ export default {
 }
 
 #logo {
-    /* background-color: pink; */
-    border-bottom: solid  rgb(190, 78, 37);
+    border-bottom: solid rgb(188, 104, 47) 5px;
     display:inline-block;
     color: white;
     margin-left: 40px;
     font-size: 2em;
-    border-bottom-width: 4px;
     text-align: left;
-    width: 130px;
-    padding-bottom: 10px;
+    width: 180px;
+    padding: 20px 0px 11px 0px;
 }
 
 #logo-small {
@@ -116,7 +110,6 @@ export default {
 }
 
 #menu-large {
-    /* background-color: brown; */
     height: 40px;
 }
 

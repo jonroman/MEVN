@@ -5,13 +5,14 @@ let meta = {
   displayMainNav: true,
   displaySubNav: true,
   displayAdminNav: false,
-  displayWidgetNav: false
+  displayWidgetNav: false,
+  subMenu: []
 }
 
 let routes = [
   {
     path: '/',
-    name: 'HomePage',
+    name: 'myDSTI',
     meta,
     component: Home
   }
